@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import HomeComponent from './Components/HomeComponent';
+import LevelZero from './Components/levelZero';
+import LevelOne from './Components/levelOne';
+import LevelTwo from './Components/levelTwo';
+import LevelThree from './Components/levelThree';
+import LevelFour from './Components/levelFour';
+import LevelFive from './Components/levelFive';
+import LevelSix from './Components/levelSix';
+import LevelSeven from './Components/levelSeven';
+import LevelEight from './Components/levelEight';
+import LevelNine from './Components/levelNine';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+      <Routes>
+          <Route path='/' element={<HomeComponent/>}/>
+          <Route path='levelZero' element={<LevelZero/>}/>
+          <Route path='levelOne' element={<LevelOne/>}/>
+          <Route path='levelTwo' element={<LevelTwo/>}/>
+          <Route path='levelThree' element={<LevelThree/>}/>
+          <Route path='levelFour' element={<LevelFour/>}/>
+          <Route path='levelFive' element={<LevelFive/>}/>
+          <Route path='levelSix' element={<LevelSix/>}/>
+          <Route path='levelSeven' element={<LevelSeven/>}/>
+          <Route path='levelEight' element={<LevelEight/>}/>
+          <Route path='levelNine' element={<LevelNine/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
